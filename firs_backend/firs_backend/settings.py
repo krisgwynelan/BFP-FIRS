@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',          # ← CHANGE 1: moved to top
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -52,9 +53,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    'corsheaders.middleware.CorsMiddleware',
-
 ]
 
 ROOT_URLCONF = 'firs_backend.urls'
@@ -144,6 +142,7 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',  # Vite
     'http://localhost:3000',  # CRA
+    'https://bfp-firs.onrender.com',
 ]
 CORS_ALLOW_CREDENTIALS = True
 
@@ -171,5 +170,4 @@ EMAIL_HOST_PASSWORD = 'iyyrmngbouulclud'    # ← change this (App Password, not
 DEFAULT_FROM_EMAIL  = EMAIL_HOST_USER
 
 PASSWORD_RESET_TIMEOUT = 120   # link expires in 1 hour (seconds)
-FRONTEND_URL = 'http://localhost:5173'  # ← change in production
-
+FRONTEND_URL = 'https://bfp-firs.onrender.com'   # ← CHANGE 2: updated to production URL
