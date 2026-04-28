@@ -3,7 +3,7 @@ import './App.css'
 import { useState, useEffect, useRef, useCallback } from "react";
 import "./index.css";
 
-/* ─── CONFIG ──────────────────────────────────────────────────────────────── */
+/* ─── CONFIGG ──────────────────────────────────────────────────────────────── */
 const API_BASE = "/api";
 
 function authHeaders(token) {
@@ -46,7 +46,7 @@ const COL_MAP = {
   "remarks":"rem","remark":"rem","notes":"rem","note":"rem"
 };
 
-/* ─── HELPERS ─────────────────────────────────────────────────────────────── */
+/* ─── HELPERSS ─────────────────────────────────────────────────────────────── */
 function peso(n)      { return "₱" + n.toLocaleString("en-PH"); }
 function pesoRaw(s)   { return parseInt(String(s).replace(/[^\d]/g,"")) || 0; }
 
