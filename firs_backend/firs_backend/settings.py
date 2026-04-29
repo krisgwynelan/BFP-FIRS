@@ -142,10 +142,12 @@ REST_FRAMEWORK = {
 
 # Allow React dev server to talk to Django
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',  # Vite
-    'http://localhost:3000',  # CRA
+    'http://localhost:5173',
+    'http://localhost:3000',
     'https://bfp-firs.onrender.com',
+    'https://bfp-firs.vercel.app',  # ← ADD THIS (or whatever your Vercel URL is)
 ]
+
 CORS_ALLOW_CREDENTIALS = True
 
 # CORS — allow React dev server
@@ -172,4 +174,4 @@ EMAIL_HOST_PASSWORD = 'iyyrmngbouulclud'    # ← change this (App Password, not
 DEFAULT_FROM_EMAIL  = EMAIL_HOST_USER
 
 PASSWORD_RESET_TIMEOUT = 120   # link expires in 1 hour (seconds)
-FRONTEND_URL = 'https://bfp-firs.onrender.com'   # ← CHANGE 2: updated to production URL
+FRONTEND_URL = 'https://bfp-firs.vercel.app'  # ← CHANGE 2: updated to production URL
