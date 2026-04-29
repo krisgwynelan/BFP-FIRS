@@ -37,4 +37,6 @@ urlpatterns = [
     path('api/forgot-password/',    forgot_password),
     path('api/verify-otp/',         verify_otp),
     path('api/reset-password/',     reset_password),
+    # ← Router last
+    path('api/',                    include(router.urls)),
 ]
